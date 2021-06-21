@@ -1,0 +1,5 @@
+gauge chia_archive_duration
+
+/.*archived on .* in (?P<hours>\d+):(?P<minutes>\d+):(?P<seconds>\d+)\.(?P<microseconds>\d+).*/ {
+    chia_archive_duration = ($hours * 3600) + ($minutes * 60) + $seconds + ($microseconds * 0.000001)
+}

@@ -1,0 +1,5 @@
+gauge chia_plot_duration
+
+/Total plot creation time was (?P<duration>\d+).*/ {
+    chia_plot_duration = $duration
+}
